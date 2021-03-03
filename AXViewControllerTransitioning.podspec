@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  类似UIAlertViewController 效果,封装成viewController
                        DESC
 
   s.homepage         = 'https://github.com/axinger/AXViewControllerTransitioning'
@@ -31,12 +31,5 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'AXViewControllerTransitioning/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'AXViewControllerTransitioning' => ['AXViewControllerTransitioning/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'ReactiveObjC' ,'~> 3.0.0'
 end

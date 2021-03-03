@@ -1,0 +1,27 @@
+PODS:
+  - AXViewControllerTransitioning (0.1.0):
+    - ReactiveObjC (~> 3.0.0)
+  - Masonry (1.1.0)
+  - ReactiveObjC (3.0.0)
+
+DEPENDENCIES:
+  - AXViewControllerTransitioning (from `../`)
+  - Masonry
+
+SPEC REPOS:
+  trunk:
+    - Masonry
+    - ReactiveObjC
+
+EXTERNAL SOURCES:
+  AXViewControllerTransitioning:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AXViewControllerTransitioning: d4901f829c5373f19e273ecc23e36a6871eb95c7
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  ReactiveObjC: ce79989e8684b9086b5f8d0c74bc7b81a8729c9e
+
+PODFILE CHECKSUM: 0ea600438f873bf88a911db3c586ba2f8cdddef5
+
+COCOAPODS: 1.10.1

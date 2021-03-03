@@ -4,7 +4,7 @@ platform :ios, '9.0'
 
 target 'AXViewControllerTransitioning_Example' do
   pod 'AXViewControllerTransitioning', :path => '../'
-
+  pod 'Masonry'
   target 'AXViewControllerTransitioning_Tests' do
     inherit! :search_paths
 

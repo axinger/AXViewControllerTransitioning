@@ -14,8 +14,6 @@ typedef NS_ENUM(NSUInteger, AXAlertControllerStyle){
     AXAlertControllerStyleCentre = UIAlertControllerStyleAlert   // 从中间放大弹出
 };
 
-#define AX_ALERT_COVER_COLOR [[UIColor blackColor] colorWithAlphaComponent:0.5]
-
 /**presented 动画时间*/
 #define AX_ALERT_PRESENTED_TIME 0.3f
 

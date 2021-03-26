@@ -22,11 +22,12 @@
     [self.view addSubview:btn];
     btn.backgroundColor = UIColor.greenColor;
     [btn setTitle:@"弹窗" forState:UIControlStateNormal];
+    btn.contentEdgeInsets = UIEdgeInsetsMake(0, 40, 0, 40);
     [btn addTarget:self action:@selector(btnAction:) forControlEvents:UIControlEventTouchUpInside];
     [btn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.center.mas_equalTo(0);
+        make.top.mas_equalTo(120);
+        make.centerX.mas_equalTo(0);
     }];
-    
 }
 
 - (void)btnAction:(UIButton *)btn {

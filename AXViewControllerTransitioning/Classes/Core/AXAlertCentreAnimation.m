@@ -45,8 +45,6 @@
     }
     
     UIView* containerView = [transitionContext containerView];
-//    containerView.backgroundColor = AX_ALERT_COVER_COLOR;
-    
     NSTimeInterval duration = [self transitionDuration:transitionContext];
 
     if (toVC.isBeingPresented) {

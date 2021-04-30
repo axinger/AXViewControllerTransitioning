@@ -35,13 +35,15 @@ Pod::Spec.new do |s|
    # s.source_files = 'AXViewControllerTransitioning/Classes/**/*'
   #s.source_files = 'AXViewControllerTransitioning/AXViewControllerTransitioning.h'
   # 虚拟文件夹 用单引号
-  s.subspec 'Component' do |ss|
-    # ss.source_files = 'AXViewControllerTransitioning/Classes/{AXBaseAlertDefine}.{h}'
-    ss.source_files = 'AXViewControllerTransitioning/Classes/{AXBaseAlertDefine,UIViewController+AXTransitioning,AXAlertTransitioningObserver}.{h,m}'
-  end
+
 
   s.subspec 'Core' do |ss|
     ss.source_files = 'AXViewControllerTransitioning/Classes/{AXAlertCentreAnimation,AXAlerUpwardAnimation,AXPresentationController}.{h,m}'
+  end
+  
+  s.subspec 'Component' do |ss|
+    # ss.source_files = 'AXViewControllerTransitioning/Classes/{AXBaseAlertDefine}.{h}'
+    ss.source_files = 'AXViewControllerTransitioning/Classes/{AXBaseAlertDefine,UIViewController+AXTransitioning,AXAlertTransitioningObserver}.{h,m}'
   end
   
   s.dependency 'ReactiveObjC' ,'~> 3.0.0'

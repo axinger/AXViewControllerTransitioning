@@ -11,12 +11,12 @@
 #endif
 
 #import "AXViewControllerTransitioning.h"
-#import "AXAlertCentreAnimation.h"
 #import "AXAlertTransitioningObserver.h"
-#import "AXAlerUpwardAnimation.h"
 #import "AXBaseAlertDefine.h"
-#import "AXPresentationController.h"
 #import "UIViewController+AXTransitioning.h"
+#import "AXAlertCentreAnimation.h"
+#import "AXAlerUpwardAnimation.h"
+#import "AXPresentationController.h"
 
 FOUNDATION_EXPORT double AXViewControllerTransitioningVersionNumber;
 FOUNDATION_EXPORT const unsigned char AXViewControllerTransitioningVersionString[];

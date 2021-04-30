@@ -1,9 +1,9 @@
 {
   "name": "AXViewControllerTransitioning",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "summary": "A short description of AXViewControllerTransitioning.",
   "description": "类似UIAlertViewController 效果,封装成viewController",
-  "homepage": "https://github.com/axinger/AXViewControllerTransitioning",
+  "homepage": "https://gitee.com/axinger/AXViewControllerTransitioning",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,16 +12,27 @@
     "axinger": "axinger@outlook.com"
   },
   "source": {
-    "git": "https://github.com/axinger/AXViewControllerTransitioning.git",
-    "tag": "0.1.0"
+    "git": "https://gitee.com/axinger/AXViewControllerTransitioning.git",
+    "tag": "1.0.0"
   },
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "AXViewControllerTransitioning/Classes/**/*",
+  "public_header_files": "AXViewControllerTransitioning/AXViewControllerTransitioning.h",
+  "source_files": "AXViewControllerTransitioning/AXViewControllerTransitioning.h",
   "dependencies": {
     "ReactiveObjC": [
       "~> 3.0.0"
     ]
-  }
+  },
+  "subspecs": [
+    {
+      "name": "Component",
+      "source_files": "AXViewControllerTransitioning/Classes/{AXBaseAlertDefine,UIViewController+AXTransitioning,AXAlertTransitioningObserver}.{h,m}"
+    },
+    {
+      "name": "Core",
+      "source_files": "AXViewControllerTransitioning/Classes/{AXAlertCentreAnimation,AXAlerUpwardAnimation,AXPresentationController}.{h,m}"
+    }
+  ]
 }

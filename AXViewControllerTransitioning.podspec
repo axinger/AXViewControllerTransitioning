@@ -36,14 +36,9 @@ Pod::Spec.new do |s|
   #s.source_files = 'AXViewControllerTransitioning/AXViewControllerTransitioning.h'
   # 虚拟文件夹 用单引号
 
-
+# 多个模块之间,不能import隔壁模块的
   s.subspec 'Core' do |ss|
-    ss.source_files = 'AXViewControllerTransitioning/Classes/{AXCoreDefine,AXAlertCentreAnimation,AXAlerUpwardAnimation,AXPresentationController}.{h,m}'
-  end
-  
-  s.subspec 'Component' do |ss|
-    # ss.source_files = 'AXViewControllerTransitioning/Classes/{AXCoreDefine}.{h}'
-    ss.source_files = 'AXViewControllerTransitioning/Classes/{UIViewController+AXTransitioning,AXAlertTransitioningObserver}.{h,m}'
+    ss.source_files = 'AXViewControllerTransitioning/Classes/*.{h,m}'
   end
   
   s.dependency 'ReactiveObjC' ,'~> 3.0.0'

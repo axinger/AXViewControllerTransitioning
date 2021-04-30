@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/axinger/axinger'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'axinger' => 'axinger@outlook.com' }
+  s.author           = { 'axinger' => 'liu_weixing@qq.com' }
   s.source           = { :git => 'https://github.com/axinger/AXViewControllerTransitioning.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
   
@@ -32,16 +32,17 @@ Pod::Spec.new do |s|
   # 头文件
   s.public_header_files = 'AXViewControllerTransitioning/AXViewControllerTransitioning.h'
   # source_files: 库的源代码
-  #  s.source_files = 'AXViewControllerTransitioning/Classes/**/*'
-  s.source_files = 'AXViewControllerTransitioning/AXViewControllerTransitioning.h'
-  # 虚拟文件夹
-  s.subspec 'Component' do |ss|
-    #    ss.public_header_files = 'AXViewControllerTransitioning/Classes/UIViewController+AXTransitioning.h'
-    ss.source_files = "AXViewControllerTransitioning/Classes/{AXBaseAlertDefine,UIViewController+AXTransitioning,AXAlertTransitioningObserver}.{h,m}"
-  end
-  s.subspec 'Core' do |ss|
-    ss.source_files = "AXViewControllerTransitioning/Classes/{AXAlertCentreAnimation,AXAlerUpwardAnimation,AXPresentationController}.{h,m}"
-  end
+   # s.source_files = 'AXViewControllerTransitioning/Classes/**/*'
+  #s.source_files = 'AXViewControllerTransitioning/AXViewControllerTransitioning.h'
+  # 虚拟文件夹 用单引号
+  # s.subspec 'Component' do |ss|
+  #   # ss.source_files = 'AXViewControllerTransitioning/Classes/{AXBaseAlertDefine}.{h}'
+  #   ss.source_files = 'AXViewControllerTransitioning/Classes/{AXBaseAlertDefine,UIViewController+AXTransitioning,AXAlertTransitioningObserver}.{h,m}'
+  # end
+
+  # s.subspec 'Core' do |sc|
+  #   sc.source_files = 'AXViewControllerTransitioning/Classes/{AXAlertCentreAnimation,AXAlerUpwardAnimation,AXPresentationController}.{h,m}'
+  # end
   
   s.dependency 'ReactiveObjC' ,'~> 3.0.0'
 end

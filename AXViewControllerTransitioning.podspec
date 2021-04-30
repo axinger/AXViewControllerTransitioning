@@ -38,11 +38,11 @@ Pod::Spec.new do |s|
 
 
   s.subspec 'Core' do |ss|
-    ss.source_files = 'AXViewControllerTransitioning/Classes/{AXBaseAlertDefine,AXAlertCentreAnimation,AXAlerUpwardAnimation,AXPresentationController}.{h,m}'
+    ss.source_files = 'AXViewControllerTransitioning/Classes/{AXCoreDefine,AXAlertCentreAnimation,AXAlerUpwardAnimation,AXPresentationController}.{h,m}'
   end
   
   s.subspec 'Component' do |ss|
-    # ss.source_files = 'AXViewControllerTransitioning/Classes/{AXBaseAlertDefine}.{h}'
+    # ss.source_files = 'AXViewControllerTransitioning/Classes/{AXCoreDefine}.{h}'
     ss.source_files = 'AXViewControllerTransitioning/Classes/{UIViewController+AXTransitioning,AXAlertTransitioningObserver}.{h,m}'
   end
   

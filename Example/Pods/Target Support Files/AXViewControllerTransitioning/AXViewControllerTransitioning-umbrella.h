@@ -12,10 +12,10 @@
 
 #import "AXViewControllerTransitioning.h"
 #import "AXAlertTransitioningObserver.h"
-#import "AXBaseAlertDefine.h"
 #import "UIViewController+AXTransitioning.h"
 #import "AXAlertCentreAnimation.h"
 #import "AXAlerUpwardAnimation.h"
+#import "AXCoreDefine.h"
 #import "AXPresentationController.h"
 
 FOUNDATION_EXPORT double AXViewControllerTransitioningVersionNumber;

@@ -6,7 +6,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AXBaseAlertDefine.h"
+
+typedef NS_ENUM(NSUInteger, AXAlertControllerStyle){
+    AXAlertControllerStyleUpward = UIAlertControllerStyleActionSheet,// 从下往上
+    AXAlertControllerStyleCentre = UIAlertControllerStyleAlert   // 从中间放大弹出
+};
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AXAlertTransitioningObserver : NSObject<UIViewControllerTransitioningDelegate>

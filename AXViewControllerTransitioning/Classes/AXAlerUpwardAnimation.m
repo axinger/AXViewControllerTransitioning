@@ -7,7 +7,7 @@
 //
 
 #import "AXAlerUpwardAnimation.h"
-#import "AXBaseAlertDefine.h"
+#import "AXCoreDefine.h"
 
 @implementation AXAlerUpwardAnimation
 

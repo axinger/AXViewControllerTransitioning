@@ -1,11 +1,11 @@
 PODS:
-  - AXViewControllerTransitioning (1.0.0):
-    - AXViewControllerTransitioning/Component (= 1.0.0)
-    - AXViewControllerTransitioning/Core (= 1.0.0)
+  - AXViewControllerTransitioning (1.1.1):
+    - AXViewControllerTransitioning/Component (= 1.1.1)
+    - AXViewControllerTransitioning/Core (= 1.1.1)
     - ReactiveObjC (~> 3.0.0)
-  - AXViewControllerTransitioning/Component (1.0.0):
+  - AXViewControllerTransitioning/Component (1.1.1):
     - ReactiveObjC (~> 3.0.0)
-  - AXViewControllerTransitioning/Core (1.0.0):
+  - AXViewControllerTransitioning/Core (1.1.1):
     - ReactiveObjC (~> 3.0.0)
   - Masonry (1.1.0)
   - ReactiveObjC (3.0.0)
@@ -24,7 +24,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AXViewControllerTransitioning: c6bd4c39087dc628012d9a5bf351191597b3d013
+  AXViewControllerTransitioning: 49c1dbb6ecfff1be1c2cd3541a08da4d20a85b55
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   ReactiveObjC: a266e7c102a495d7d63f859980a2e071726f610a
 

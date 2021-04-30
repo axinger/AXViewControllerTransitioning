@@ -7,7 +7,7 @@
 //
 
 #import "AXAlertCentreAnimation.h"
-#import "AXBaseAlertDefine.h"
+#import "AXCoreDefine.h"
 
 
 @implementation AXAlertCentreAnimation

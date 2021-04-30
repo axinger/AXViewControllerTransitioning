@@ -34,15 +34,33 @@
         handler(self.alertObserver);
     }
     self.transitioningDelegate = self.alertObserver;
-    __weak typeof(self) weakSelf = self;
     
-    if ([self respondsToSelector:@selector(viewDidLoad)]) {
-        [[self rac_signalForSelector:@selector(viewDidLoad)] subscribeNext:^(id  _Nullable x) {
-            __strong typeof(weakSelf) strongSelf = weakSelf;
-            strongSelf.view.backgroundColor = UIColor.clearColor;
+    if ([self respondsToSelector:@selector(view)]) {
+        [RACObserve(self, view) subscribeNext:^(UIView   *view) {
+            view.backgroundColor = UIColor.clearColor;
         }];
+        
     }
+//    __weak typeof(self) weakSelf = self;
+//
+//    if ([self respondsToSelector:@selector(viewDidLoad)]) {
+//        [[self rac_signalForSelector:@selector(viewDidLoad)] subscribeNext:^(id  _Nullable x) {
+//            __strong typeof(weakSelf) strongSelf = weakSelf;
+//            strongSelf.view.backgroundColor = UIColor.clearColor;
+//        }];
+//    }
+
+//    if (self.alertObserver.isTouchDismiss) {
+//        if ([self respondsToSelector:@selector(touchesBegan:withEvent:)]) {
+//            [[self rac_signalForSelector:@selector(touchesBegan:withEvent:)] subscribeNext:^(id  _Nullable x) {
+//                __strong typeof(weakSelf) strongSelf = weakSelf;
+//                NSSet<UITouch *> *touches = x[0];
+//                if ([touches.anyObject.view isEqual:self.view]) {
+//                    [strongSelf dismissViewControllerAnimated:YES completion:nil];
+//                }
+//            }];
+//        }
+//    }
    
-    
 }
 @end

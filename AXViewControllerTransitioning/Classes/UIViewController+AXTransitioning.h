@@ -24,7 +24,9 @@
  }
  /// 调用者自控制是否点击空白页面 消失
  - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-     [self dismissViewControllerAnimated:YES completion:nil];
+     if ([touches.anyObject.view isEqual:self.view]) {
+         [self dismissViewControllerAnimated:YES completion:nil];
+     }
  }
  */
 /// 自定义alert样式, 主要view背景色不能自行添加颜色,必须保持透明

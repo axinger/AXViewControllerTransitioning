@@ -7,4 +7,3 @@
 
 #import "UIViewController+AXTransitioning.h"
 #import "AXAlertTransitioningObserver.h"
-#import "AXBaseAlertDefine.h"

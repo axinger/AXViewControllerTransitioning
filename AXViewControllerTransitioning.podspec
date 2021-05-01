@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AXViewControllerTransitioning'
-  s.version          = '1.1.1'
-  s.summary          = 'A short description of AXViewControllerTransitioning.'
+  s.version          = '1.1.2'
+  s.summary          = 'axinger iOS开发'
   
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   类似UIAlertViewController 效果,封装成viewController
   DESC
   
-  s.homepage         = 'https://github.com/axinger/axinger'
+  s.homepage         = 'https://www.jianshu.com/u/332ecb51d41b'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'axinger' => 'liu_weixing@qq.com' }
@@ -29,16 +29,33 @@ Pod::Spec.new do |s|
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
   
   s.ios.deployment_target = '9.0'
-  # 头文件
+  
+  
+  s.prefix_header_contents = '#import <UIKit/UIKit.h>', '#import <Foundation/Foundation.h>'
+  #可以将多行内容放到两个EOS中间
+  # s.prefix_header_contents = <<-EOS
+  # #ifdef __OBJC__
+  # #import <UIKit/UIKit.h>
+  # #else
+  # EOS
+  s.prefix_header_contents = <<-EOS
+  #define HHHH @"测试代码"
+  EOS
+  
+  #pod库暴露给用户工程的头文件。如果不指定那么source_files中的所有header都被认为是公共的。
   s.public_header_files = 'AXViewControllerTransitioning/AXViewControllerTransitioning.h'
   # source_files: 库的源代码
-   # s.source_files = 'AXViewControllerTransitioning/Classes/**/*'
-  #s.source_files = 'AXViewControllerTransitioning/AXViewControllerTransitioning.h'
-  # 虚拟文件夹 用单引号
-
-# 多个模块之间,不能import隔壁模块的
+  s.source_files = 'AXViewControllerTransitioning/**/*.{h,m}'
+  s.source_files = 'AXViewControllerTransitioning/*.h'
+  
+  # 多个模块之间,不能import隔壁模块的,要用子库的spec依赖其他subspec·
   s.subspec 'Core' do |ss|
-    ss.source_files = 'AXViewControllerTransitioning/Classes/*.{h,m}'
+    ss.source_files = 'AXViewControllerTransitioning/Core/*.{h,m}'
+  end
+  
+  s.subspec 'Component' do |ss|
+    ss.dependency 'AXViewControllerTransitioning/Core'
+    ss.source_files = 'AXViewControllerTransitioning/Component/*.{h,m}'
   end
   
   s.dependency 'ReactiveObjC' ,'~> 3.0.0'

@@ -55,9 +55,11 @@ AX_REDEFINE_CONTROLLER_VIEW_IMPL(AXShowView);
     if ([touches.anyObject.view isEqual:self.view]) {
         [self dismissViewControllerAnimated:YES completion:nil];
     }
+    
 }
 
 - (void)dealloc {
     NSLog(@"dealloc = %@",self.class);
+    
 }
 @end

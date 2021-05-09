@@ -9,11 +9,11 @@
 #ifndef AXCoreDefine_h
 #define AXCoreDefine_h
 
-/**presented 动画时间*/
-#define AX_ALERT_PRESENTED_TIME 0.3f
-
-/**dismissed 动画时间*/
-#define AX_ALERT_DISMISSED_TIME 0.1f
+///**presented 动画时间*/
+//#define AX_ALERT_PRESENTED_TIME 0.3f
+//
+///**dismissed 动画时间*/
+//#define AX_ALERT_DISMISSED_TIME 0.1f
 
 @protocol AXBaseAlertDataSource <NSObject>
 

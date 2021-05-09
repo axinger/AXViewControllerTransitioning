@@ -1,8 +1,8 @@
 //
-//  AXShowView.h
+//  AXShowUpPopViewController.h
 //  AXViewControllerTransitioning_Example
 //
-//  Created by 小星星吃KFC on 2021/4/30.
+//  Created by 小星星吃KFC on 2021/5/9.
 //  Copyright © 2021 axinger. All rights reserved.
 //
 
@@ -10,8 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AXShowView : UIView
-@property(nonatomic, copy) void(^dismissBlock)(void);
+@interface AXShowUpPopViewController : UIViewController
+
 @end
 
 NS_ASSUME_NONNULL_END

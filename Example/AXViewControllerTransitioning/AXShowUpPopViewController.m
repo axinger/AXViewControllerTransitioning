@@ -1,12 +1,12 @@
 //
-//  AXShowViewController.m
-//  AXAlertTransitioningObserver_Example
+//  AXShowUpPopViewController.m
+//  AXViewControllerTransitioning_Example
 //
-//  Created by 小星星吃KFC on 2021/2/27.
+//  Created by 小星星吃KFC on 2021/5/9.
 //  Copyright © 2021 axinger. All rights reserved.
 //
 
-#import "AXShowViewController.h"
+#import "AXShowUpPopViewController.h"
 #import "UIViewController+AXTransitioning.h"
 #import <Masonry/Masonry.h>
 #import "AXShowView.h"
@@ -31,18 +31,16 @@ self.view = [[aViewClass alloc]init];\
 return (aViewClass *)[super view];\
 }\
 
-
-
-@interface AXShowViewController ()
+@interface AXShowUpPopViewController ()
 AX_REDEFINE_CONTROLLER_VIEW_PROPERTY(AXShowView);
 @end
 
-@implementation AXShowViewController
+@implementation AXShowUpPopViewController
 AX_REDEFINE_CONTROLLER_VIEW_IMPL(AXShowView);
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
         [self ax_alertObserver:^(AXAlertTransitioningObserver *observer) {
-            observer.alertControllerStyle = AXAlertControllerStyleCentre;
+            observer.alertControllerStyle = AXAlertControllerStyleUpward;
     }];
     }
     return self;
@@ -56,9 +54,17 @@ AX_REDEFINE_CONTROLLER_VIEW_IMPL(AXShowView);
         [strongSelf dismissViewControllerAnimated:YES completion:nil];
     };
 }
+/// 调用者自控制是否点击空白页面 消失
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    if ([touches.anyObject.view isEqual:self.view]) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+    
+}
 
 - (void)dealloc {
     NSLog(@"dealloc = %@",self.class);
     
 }
+
 @end

@@ -23,26 +23,31 @@
         contentView.layer.cornerRadius = 5;
         [self addSubview:contentView];
         
-        
-        
-        UILabel *label = UILabel.alloc.init;
-        [contentView addSubview:label];
-        label.text = @"我是内容";
-        
+        UIButton *btn = UIButton.alloc.init;
+        [contentView addSubview:btn];
+        [btn setTitle:@"我是按钮,点我消失" forState:UIControlStateNormal];
+        [btn setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+        btn.backgroundColor = UIColor.blueColor;
+        [btn addTarget:self action:@selector(action:) forControlEvents:UIControlEventTouchUpInside];
         [contentView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.center.mas_equalTo(0);
             make.left.mas_equalTo(50);
             make.right.mas_equalTo(-50);
-        
-            make.height.equalTo(label.mas_height).mas_offset(60);
+            
+            make.height.equalTo(btn.mas_height).mas_offset(60);
         }];
         
-        [label mas_makeConstraints:^(MASConstraintMaker *make) {
+        [btn mas_makeConstraints:^(MASConstraintMaker *make) {
             make.center.mas_equalTo(0);
         }];
         
     }
     return self;
+}
+-(void)action:(UIButton *)btn{
+    if (self.dismissBlock) {
+        self.dismissBlock();
+    }
 }
 
 @end

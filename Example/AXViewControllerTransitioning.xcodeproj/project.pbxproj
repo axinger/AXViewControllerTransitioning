@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2172C37C26482ABA0065BD11 /* AXShowUpPopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2172C37B26482ABA0065BD11 /* AXShowUpPopViewController.m */; };
 		21F0DA1E263C3777007D4E1E /* AXShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F0DA1D263C3777007D4E1E /* AXShowView.m */; };
 		21F7EAA125EF801D007FBB12 /* AXShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21F7EA9F25EF801D007FBB12 /* AXShowViewController.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -40,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		04D1C65C58EF4E4DCF7FEB84 /* Pods_AXViewControllerTransitioning_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AXViewControllerTransitioning_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2172C37A26482ABA0065BD11 /* AXShowUpPopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AXShowUpPopViewController.h; sourceTree = "<group>"; };
+		2172C37B26482ABA0065BD11 /* AXShowUpPopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AXShowUpPopViewController.m; sourceTree = "<group>"; };
 		21F0DA1C263C3777007D4E1E /* AXShowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AXShowView.h; sourceTree = "<group>"; };
 		21F0DA1D263C3777007D4E1E /* AXShowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AXShowView.m; sourceTree = "<group>"; };
 		21F7EA9F25EF801D007FBB12 /* AXShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AXShowViewController.m; sourceTree = "<group>"; };
@@ -153,6 +156,8 @@
 				6003F59D195388D20070C39A /* AXAppDelegate.m */,
 				21F7EAA025EF801D007FBB12 /* AXShowViewController.h */,
 				21F7EA9F25EF801D007FBB12 /* AXShowViewController.m */,
+				2172C37A26482ABA0065BD11 /* AXShowUpPopViewController.h */,
+				2172C37B26482ABA0065BD11 /* AXShowUpPopViewController.m */,
 				21F0DA1C263C3777007D4E1E /* AXShowView.h */,
 				21F0DA1D263C3777007D4E1E /* AXShowView.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -380,6 +385,7 @@
 				6003F59E195388D20070C39A /* AXAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* AXViewController.m in Sources */,
 				21F7EAA125EF801D007FBB12 /* AXShowViewController.m in Sources */,
+				2172C37C26482ABA0065BD11 /* AXShowUpPopViewController.m in Sources */,
 				21F0DA1E263C3777007D4E1E /* AXShowView.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);

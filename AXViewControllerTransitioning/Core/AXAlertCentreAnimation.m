@@ -9,6 +9,8 @@
 #import "AXAlertCentreAnimation.h"
 #import "AXCoreDefine.h"
 
+static  NSTimeInterval const presentTime = 0.3;
+static  NSTimeInterval const dismissTime = 0.1;
 
 @implementation AXAlertCentreAnimation
 
@@ -22,11 +24,11 @@
     UIViewController* fromVC = [transitionContext
         viewControllerForKey:UITransitionContextFromViewControllerKey];
     if (toVC.isBeingPresented) {
-        return AX_ALERT_PRESENTED_TIME;
+        return presentTime;
     } else if (fromVC.isBeingDismissed) {
-        return AX_ALERT_DISMISSED_TIME;
+        return dismissTime;
     }else{
-        return AX_ALERT_PRESENTED_TIME;
+        return presentTime;
     }
 }
 

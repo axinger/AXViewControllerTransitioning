@@ -58,5 +58,5 @@ Pod::Spec.new do |s|
     ss.source_files = 'AXViewControllerTransitioning/Component/*.{h,m}'
   end
   
-  s.dependency 'ReactiveObjC' ,'~> 3.0.0'
+  s.dependency 'ReactiveObjC' ,'> 3.0.0'
 end

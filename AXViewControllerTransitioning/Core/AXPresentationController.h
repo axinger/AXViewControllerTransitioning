@@ -2,7 +2,7 @@
 //  AXPresentationController.h
 //  AXiOSKit
 //
-//  Created by AXing on 2019/6/26.
+//  Created by axing on 2019/6/26.
 //  Copyright © 2019 liu.weixing. All rights reserved.
 //
 

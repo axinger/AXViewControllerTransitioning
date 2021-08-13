@@ -47,9 +47,17 @@ AX_REDEFINE_CONTROLLER_VIEW_IMPL(AXShowView);
     }
     return self;
 }
-
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        NSLog(@"init=%@",self);
+    }
+    return self;
+}
 -(void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"viewDidLoad=%@",self);
     __weak typeof(self) weakSelf = self;
     self.view.dismissBlock = ^{
         __strong typeof(weakSelf) strongSelf = weakSelf;
